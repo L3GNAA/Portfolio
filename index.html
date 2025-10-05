@@ -32,11 +32,11 @@
     }
     .header-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
     nav.tabs{display:flex;gap:20px;font-size:14px}
-    nav.tabs button{
+    nav.tabs button, nav.tabs a{
       appearance:none;background:none;border:none;padding:4px 0;cursor:pointer;
-      color:var(--text);opacity:.9;transition:opacity .15s ease;
+      color:var(--text);opacity:.9;transition:opacity .15s ease;text-decoration:none;
     }
-    nav.tabs button:hover{opacity:.6}
+    nav.tabs button:hover, nav.tabs a:hover{opacity:.6}
     .brand{ text-align:center; line-height:1 }
     .brand .first{font-family: Georgia, Cambria, "Times New Roman", Times, serif;font-size:30px;letter-spacing:-.5px}
     .brand .last{font-family: Georgia, Cambria, "Times New Roman", Times, serif;font-size:30px;letter-spacing:-.5px;margin-top:-4px}
@@ -82,8 +82,9 @@
       <nav class="tabs" id="tabs">
         <button data-tab="about">About</button>
         <button data-tab="work">Work With Me</button>
-        <button data-tab="mentorship">Mentorship</button>
         <button data-tab="portfolio">Portfolio</button>
+        <button data-tab="certificates">Certificates</button>
+        <a href="https://www.linkedin.com/in/angel-contreras-488539195/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <button data-tab="blog">Blog</button>
       </nav>
       <div class="brand">
@@ -110,8 +111,8 @@
     <section id="dynamic" class="container panel hidden">
       <div id="about" class="tab-pane hidden"><p class="text-lg">About section content goes here.</p></div>
       <div id="work" class="tab-pane hidden"><p class="text-lg">Work With Me section content goes here.</p></div>
-      <div id="mentorship" class="tab-pane hidden"><p class="text-lg">Mentorship section content goes here.</p></div>
       <div id="portfolio" class="tab-pane hidden"><p class="text-lg">Portfolio section content goes here.</p></div>
+      <div id="certificates" class="tab-pane hidden"><p class="text-lg">Certificates section content goes here.</p></div>
       <div id="blog" class="tab-pane hidden"><p class="text-lg">Blog section content goes here.</p></div>
     </section>
 
