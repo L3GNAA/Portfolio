@@ -1,0 +1,106 @@
+import React, { useState } from "react";
+
+const tabs = [
+  { key: "about", label: "About" },
+  { key: "work", label: "Work With Me" },
+  { key: "mentorship", label: "Mentorship" },
+  { key: "portfolio", label: "Portfolio" },
+  { key: "blog", label: "Blog" },
+];
+
+const SectionContent = ({ active }) => {
+  switch (active) {
+    case "about":
+      return <p className="text-lg">About section content goes here.</p>;
+    case "work":
+      return <p className="text-lg">Work With Me section content goes here.</p>;
+    case "mentorship":
+      return <p className="text-lg">Mentorship section content goes here.</p>;
+    case "portfolio":
+      return <p className="text-lg">Portfolio section content goes here.</p>;
+    case "blog":
+      return <p className="text-lg">Blog section content goes here.</p>;
+    default:
+      return null;
+  }
+};
+
+function SmilingEmojiAvatar() {
+  return (
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="aspect-square w-64 md:w-80 lg:w-96 rounded-2xl bg-white shadow-md flex items-center justify-center text-8xl">
+        😊
+      </div>
+    </div>
+  );
+}
+
+export default function App() {
+  const [activeTab, setActiveTab] = useState("home");
+
+  return (
+    <div className="min-h-screen bg-[#f4eae6] text-neutral-900">
+      <header className="sticky top-0 z-10 bg-[#f4eae6]/80 backdrop-blur supports-[backdrop-filter]:bg-[#f4eae6]/70">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <nav className="hidden md:flex gap-6 text-sm">
+            {tabs.map((t) => (
+              <button
+                key={t.key}
+                onClick={() => setActiveTab(t.key)}
+                className="hover:opacity-70 transition"
+              >
+                {t.label}
+              </button>
+            ))}
+          </nav>
+
+          <div className="text-center">
+            <div className="font-serif text-3xl leading-none tracking-tight">
+              <span className="block">Rodolfo</span>
+              <span className="block -mt-1">Contreras</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-6xl mx-auto px-6 py-12 md:py-20">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <SmilingEmojiAvatar />
+
+          <div className="space-y-6">
+            <h1 className="font-serif text-4xl md:text-5xl leading-tight">
+              Websites for coaches who
+              <br /> know that prioritizing
+              <br /> people leads to profits
+            </h1>
+            <p className="text-neutral-700 leading-relaxed">
+              I create inclusive online presences that help you book more clients
+              and build a thriving coaching business that reflects your unique
+              and multi-layered identity.
+            </p>
+            <p className="text-neutral-700 leading-relaxed">
+              Because when you show up as your full self, you create space for
+              your clients to do the same. And then everybody wins.
+            </p>
+            <button
+              onClick={() => setActiveTab("work")}
+              className="inline-flex items-center justify-center rounded-xl bg-neutral-900 text-white px-6 py-3 font-medium hover:bg-neutral-800 transition"
+            >
+              WORK WITH ME
+            </button>
+          </div>
+        </div>
+
+        {activeTab !== "home" && (
+          <section className="mt-16 md:mt-24 p-6 md:p-10 rounded-3xl bg-white/70 border border-neutral-200 shadow-sm">
+            <SectionContent active={activeTab} />
+          </section>
+        )}
+      </main>
+
+      <footer className="max-w-6xl mx-auto px-6 py-12 text-sm text-neutral-600">
+        © {new Date().getFullYear()} Rodolfo Contreras. All rights reserved.
+      </footer>
+    </div>
+  );
+}
