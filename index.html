@@ -1,141 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Angel Contreras</title>
-  <style>
-    :root{
-      --bg: #f5e6d3;
-      --text: #111111;
-      --muted: #5f5f5f;
-      --card: #ffffffb3;
-      --border: #e5e5e5;
-      --btn: #111111;
-      --btnHover: #222222;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Helvetica Neue", "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:var(--bg);
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    }
-    .container{max-width:1100px;margin:0 auto;padding:0 24px}
-    header{
-      position:sticky;top:0;z-index:10;
-      backdrop-filter:saturate(1.2) blur(6px);
-      background:rgba(245,230,211,0.85);
-      border-bottom:1px solid rgba(0,0,0,0.06);
-    }
-    .header-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-    nav.tabs{display:flex;gap:20px;font-size:14px}
-    nav.tabs button, nav.tabs a{
-      appearance:none;background:none;border:none;padding:4px 0;cursor:pointer;
-      color:var(--text);opacity:.9;transition:opacity .15s ease;text-decoration:none;
-    }
-    nav.tabs button:hover, nav.tabs a:hover{opacity:.6}
-    .brand{ text-align:center; line-height:1 }
-    .brand .first{font-family: Georgia, Cambria, "Times New Roman", Times, serif;font-size:30px;letter-spacing:-.5px}
-    .brand .last{font-family: Georgia, Cambria, "Times New Roman", Times, serif;font-size:30px;letter-spacing:-.5px;margin-top:-4px}
-    main{padding:60px 0}
-    .grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
-    @media (min-width: 800px){
-      .grid{grid-template-columns: 1fr 1fr; gap:64px}
-    }
-    .avatar{
-      width: clamp(220px, 40vw, 380px);
-      aspect-ratio:1/1;
-      background:#fff;border-radius:20px;
-      display:flex;align-items:center;justify-content:center;
-      font-size: clamp(64px,10vw,110px);
-      box-shadow:0 4px 20px rgba(0,0,0,.08);
-      margin: 0 auto;
-    }
-    h1{
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-      font-size: clamp(32px, 4vw, 52px);
-      line-height:1.15;margin:0 0 16px;
-    }
-    p{color:var(--muted);line-height:1.7;margin:12px 0}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      background:var(--btn);color:#fff;border-radius:12px;
-      padding:12px 18px;border:none;cursor:pointer;
-      font-weight:600;transition:background .15s ease;
-      margin-top:8px;
-    }
-    .btn:hover{background:var(--btnHover)}
-    .panel{
-      margin-top:60px;background:var(--card);border:1px solid var(--border);
-      border-radius:22px;padding:24px 28px;box-shadow:0 6px 24px rgba(0,0,0,.05)
-    }
-    .hidden{display:none}
-    footer{color:#6b7280;font-size:14px;padding:48px 0}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container header-row">
-      <nav class="tabs" id="tabs">
-        <button data-tab="about">About</button>
-        <button data-tab="work">Contact</button>
-        <button data-tab="portfolio">Portfolio</button>
-        <button data-tab="certificates">Certificates</button>
-        <a href="https://www.linkedin.com/in/angel-contreras-488539195/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <button data-tab="blog">Blog</button>
-      </nav>
-      <div class="brand">
-        <div class="first">Angel</div>
-        <div class="last">Contreras</div>
-      </div>
-      <div style="width:140px"><!-- spacer to balance layout --></div>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
 
-  <main>
-    <div class="container grid">
-      <div class="avatar" aria-label="computer chip">
-        🖥️
-      </div>
-      <div>
-        <h1>Hi, I'm Angel Antonio<br>Looking for a an extensive/ talented addage to the workforce?<br>Perhaps I'm the right fit</h1>
-        <p>I'm on my last few months of university, looking to transition to the tech world where I can adapt my unique set of skills and abilities</p>
-        <p>Because when you show up as your full self, you create space for your clients to do the same. And then everybody wins.</p>
-        <button class="btn" id="ctaWork">Help Me, Help You</button>
-      </div>
-    </div>
+    <title>Sumanth Samala</title>
+    <meta name="description" content="Full Stack Developer @ Kajima" />
+    <meta name="author" content="Sumanth Samala" />
 
-    <section id="dynamic" class="container panel hidden">
-      <div id="about" class="tab-pane hidden"><p class="text-lg">About section content goes here.</p></div>
-      <div id="work" class="tab-pane hidden"><p class="text-lg">Work With Me section content goes here.</p></div>
-      <div id="portfolio" class="tab-pane hidden"><p class="text-lg">Portfolio section content goes here.</p></div>
-      <div id="certificates" class="tab-pane hidden"><p class="text-lg">Certificates section content goes here.</p></div>
-      <div id="blog" class="tab-pane hidden"><p class="text-lg">Blog section content goes here.</p></div>
-    </section>
+    <!-- Optional: modern SEO/social (edit or remove if not needed) -->
+    <link rel="canonical" href="https://example.com/" />
+    <meta property="og:title" content="Sumanth Samala" />
+    <meta property="og:description" content="Full Stack Developer @ Kajima" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Sumanth Samala" />
+    <meta name="twitter:description" content="Full Stack Developer @ Kajima" />
 
-  </main>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1NR05ZT5H3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-1NR05ZT5H3");
+    </script>
 
-  <footer class="container">© <span id="year"></span> Angel Contreras. All rights reserved.</footer>
+    <!-- App assets -->
+    <link rel="stylesheet" href="/static/css/main.0e816926.css" />
+    <script defer src="/static/js/main.6a2b8a81.js"></script>
+  </head>
 
-  <script>
-    const dynamic = document.getElementById('dynamic');
-    const panes = Array.from(document.querySelectorAll('.tab-pane'));
-    function showTab(id){
-      dynamic.classList.remove('hidden');
-      panes.forEach(p => p.classList.add('hidden'));
-      const t = document.getElementById(id);
-      if (t) t.classList.remove('hidden');
-      dynamic.scrollIntoView({behavior:'smooth', block:'start'});
-    }
-    document.getElementById('tabs').addEventListener('click', (e)=>{
-      const btn = e.target.closest('button[data-tab]'); if(!btn) return;
-      showTab(btn.dataset.tab);
-    });
-    document.getElementById('ctaWork').addEventListener('click', ()=> showTab('work'));
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>
